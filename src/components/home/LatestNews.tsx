@@ -3,13 +3,13 @@ import { motion } from 'motion/react';
 const NEWS_ITEMS = [
   {
     id: '1',
-    image: 'https://images.unsplash.com/photo-1544648151-53606ae88755?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800&auto=format&fit=crop',
     title: 'Lançamento do Caderno de Formação: Diálogos sobre Autonomia',
     excerpt: 'Um guia prático para educadores populares explorarem a autonomia na sala de aula.',
   },
   {
     id: '2',
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800&auto=format&fit=crop',
     title: 'Inscrições abertas para o Seminário de Educação Popular',
     excerpt: 'Participe do nosso encontro anual de formação crítica e troca de experiências.',
   },

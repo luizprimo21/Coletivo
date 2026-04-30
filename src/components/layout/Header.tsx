@@ -20,7 +20,7 @@ export default function Header({ navItems, activeId, onNavigate }: HeaderProps) 
         onClick={() => onNavigate('inicio')}
       >
         <img 
-          src="/input_file_2.png" 
+          src="https://i.postimg.cc/k5B5b274/horizontal-color.png" 
           alt="Coletivo Paulo Freire" 
           className="h-14 w-auto object-contain"
           referrerPolicy="no-referrer"
