@@ -11,6 +11,8 @@ const PARTNERS: PartnerItem[] = [
 ];
 
 export default function PartnersList() {
+  const COLORS = ['bg-pf-rose', 'bg-pf-yellow', 'bg-pf-blue', 'bg-pf-orange'];
+
   return (
     <div className="bg-pf-bg min-h-screen">
       <section className="py-24 border-b-subtle">
@@ -32,11 +34,11 @@ export default function PartnersList() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className={`p-16 flex flex-col items-center justify-center text-center transition-colors hover:bg-pf-feature border-b-subtle sm:border-b-subtle lg:border-b-subtle ${
+              className={`p-16 flex flex-col items-center justify-center text-center transition-colors hover:bg-white border-b-subtle sm:border-b-subtle lg:border-b-subtle ${
                 (idx % 3 !== 2) ? 'lg:border-r-subtle' : ''
               } ${(idx % 2 !== 1) ? 'sm:border-r-subtle lg:border-r-subtle' : 'sm:border-r-0 lg:border-r-subtle'}`}
             >
-              <div className="w-16 h-16 bg-white border-subtle rounded-full flex items-center justify-center mb-8 font-bold text-pf-red text-2xl">
+              <div className={`w-16 h-16 ${COLORS[idx % COLORS.length]} rounded-full flex items-center justify-center mb-8 font-bold text-pf-dark text-2xl`}>
                 {partner.name.charAt(0)}
               </div>
               <h3 className="font-bold text-pf-dark text-lg leading-tight uppercase tracking-tight">

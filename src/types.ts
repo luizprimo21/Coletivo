@@ -6,6 +6,7 @@
 export interface NavItem {
   id: string;
   label: string;
+  children?: NavItem[];
 }
 
 export interface NewsItem {

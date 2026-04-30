@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
@@ -13,6 +13,8 @@ import News from './components/home/News';
 import WhoWeAre from './components/about/WhoWeAre';
 import EventsList from './components/events/EventsList';
 import ArchiveList from './components/archive/ArchiveList';
+import SMEArchive from './components/archive/SMEArchive';
+import RodasDeMemorias from './components/archive/RodasDeMemorias';
 import PartnersList from './components/partners/PartnersList';
 import { NavItem } from './types';
 
@@ -20,12 +22,26 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'inicio', label: 'Início' },
   { id: 'quem-somos', label: 'Quem Somos' },
   { id: 'eventos', label: 'Eventos' },
-  { id: 'acervo', label: 'Acervo' },
+  { id: 'acervo-sme', label: 'ACERVO SME' },
+  { 
+    id: 'acervo', 
+    label: 'PRODUÇÕES',
+    children: [
+      { id: 'acervo-rodas', label: 'Rodas de Memórias' },
+      { id: 'acervo-entrevistas', label: 'Entrevistas' },
+      { id: 'acervo-paulo-freire', label: 'Paulo Freire' },
+      { id: 'acervo-producoes', label: 'Produções do Coletivo' },
+    ]
+  },
   { id: 'parcerias', label: 'Parcerias' },
 ];
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('inicio');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
   const renderContent = () => {
     switch (currentPage) {
@@ -41,7 +57,14 @@ export default function App() {
         return <WhoWeAre />;
       case 'eventos':
         return <EventsList />;
+      case 'acervo-sme':
+        return <SMEArchive />;
+      case 'acervo-rodas':
+        return <RodasDeMemorias />;
       case 'acervo':
+      case 'acervo-entrevistas':
+      case 'acervo-paulo-freire':
+      case 'acervo-producoes':
         return <ArchiveList />;
       case 'parcerias':
         return <PartnersList />;

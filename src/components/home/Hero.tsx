@@ -29,6 +29,8 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
+  const TAG_COLORS = ['bg-pf-yellow', 'bg-pf-rose', 'bg-pf-blue'];
+
   return (
     <section className="h-[380px] border-b-subtle overflow-hidden w-full relative">
       <div className="w-full h-full relative bg-pf-feature p-10 md:p-20 flex flex-col justify-end group">
@@ -37,8 +39,8 @@ export default function Hero() {
             <div 
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${
-                current === i ? 'bg-pf-red' : 'bg-pf-border'
+              className={`w-2 h-2 rounded-full cursor-pointer transition-all ${
+                current === i ? 'bg-pf-red w-4' : 'bg-pf-border'
               }`}
             />
           ))}
@@ -52,13 +54,13 @@ export default function Hero() {
             exit={{ opacity: 0, x: 10 }}
             className="flex flex-col gap-4 relative z-10"
           >
-            <div className="bg-pf-red text-white px-3 py-1 text-[11px] font-bold self-start rounded-[2px] tracking-widest">
+            <div className={`${TAG_COLORS[current]} text-pf-dark px-3 py-1 text-[11px] font-bold self-start rounded-[2px] tracking-widest uppercase`}>
               DESTAQUE
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tighter max-w-[800px]">
+            <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tighter max-w-[800px] text-pf-dark">
               {SLIDES[current].title}
             </h1>
-            <p className="text-pf-muted text-base max-w-[600px]">
+            <p className="text-pf-dark/80 text-base max-w-[600px]">
               {SLIDES[current].description}
             </p>
           </motion.div>
