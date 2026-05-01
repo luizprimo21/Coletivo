@@ -123,17 +123,14 @@ export default function WhoWeAre() {
                     <ul className="flex flex-col gap-3 text-pf-muted list-none pl-1">
                       {[
                         'Cursos', 'Grupos de Discussão', 'Debates', 'Mesas Redondas',
-                        'Produções Teóricas', 'Produções de Materiais', 'Relatos de Prática'
+                        'Produções Teóricas', 'Produções de Materiais', 'Relatos de Prática', 'Parcerias com universidades, centros de estudo freireanos e coletivos do campo democrático'
                       ].map(item => (
                         <li key={item} className="flex items-center gap-2">
                           <span className="w-1 h-1 bg-pf-rose rounded-full"></span>
                           {item}
                         </li>
                       ))}
-                      <li className="flex items-start gap-2 mt-2 font-medium text-pf-dark italic">
-                        <span className="w-1 h-1 bg-pf-blue rounded-full mt-2.5"></span>
-                        Parcerias com universidades, centros de estudo freireanos e coletivos do campo democrático
-                      </li>
+
                     </ul>
                   </div>
 

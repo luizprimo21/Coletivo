@@ -15,6 +15,8 @@ import EventsList from './components/events/EventsList';
 import ArchiveList from './components/archive/ArchiveList';
 import SMEArchive from './components/archive/SMEArchive';
 import RodasDeMemorias from './components/archive/RodasDeMemorias';
+import Entrevistas from './components/archive/Entrevistas';
+import PauloFreireArchive from './components/archive/PauloFreireArchive';
 import PartnersList from './components/partners/PartnersList';
 import { NavItem } from './types';
 
@@ -23,13 +25,13 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'quem-somos', label: 'Quem Somos' },
   { id: 'eventos', label: 'Eventos' },
   { id: 'acervo-sme', label: 'ACERVO SME' },
+  { id: 'acervo-paulo-freire', label: 'ACERVO PAULO FREIRE' },
   { 
     id: 'acervo', 
     label: 'PRODUÇÕES',
     children: [
       { id: 'acervo-rodas', label: 'Rodas de Memórias' },
       { id: 'acervo-entrevistas', label: 'Entrevistas' },
-      { id: 'acervo-paulo-freire', label: 'Paulo Freire' },
       { id: 'acervo-producoes', label: 'Produções do Coletivo' },
     ]
   },
@@ -61,9 +63,11 @@ export default function App() {
         return <SMEArchive />;
       case 'acervo-rodas':
         return <RodasDeMemorias />;
-      case 'acervo':
       case 'acervo-entrevistas':
+        return <Entrevistas />;
       case 'acervo-paulo-freire':
+        return <PauloFreireArchive />;
+      case 'acervo':
       case 'acervo-producoes':
         return <ArchiveList />;
       case 'parcerias':

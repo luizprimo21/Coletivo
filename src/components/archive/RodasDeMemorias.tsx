@@ -22,18 +22,10 @@ const THEMED_VIDEOS: VideoTheme[] = [
       {
         id: 'roda-1-1',
         title: 'Educação de Adultos (Parte 1)',
-        date: '23 ABR 2021',
+        date: '27 JUL 2021',
         link: 'https://youtu.be/KwcfyD6VyLE',
-        thumbnail: 'https://img.youtube.com/vi/KwcfyD6VyLE/maxresdefault.jpg',
-        description: 'Primeira parte do resgate histórico sobre a política de educação de adultos narrada pelos protagonistas.',
-      },
-      {
-        id: 'roda-1-2',
-        title: 'Educação de Adultos (Parte 2)',
-        date: '19 MAR 2021',
-        link: 'https://youtu.be/zZAS4ByqQ-Y',
-        thumbnail: 'https://img.youtube.com/vi/zZAS4ByqQ-Y/maxresdefault.jpg',
-        description: 'Continuação do debate sobre os eixos centrais da gestão Paulo Freire na SME-SP.',
+        thumbnail: '/regenerated_image_1777642709155.jpg',
+        description: 'Roda de memória das comemorações dos 30 anos da gestão democrática e popular de Luiza Erundina, Pau Freire e Mario Cortella',
       },
     ]
   },
@@ -44,40 +36,40 @@ const THEMED_VIDEOS: VideoTheme[] = [
         id: 'roda-inter-1',
         title: 'Diagnóstico Inicial',
         date: 'HISTÓRICO',
-        link: 'https://youtu.be/KwcfyD6VyLE',
-        thumbnail: 'https://img.youtube.com/vi/KwcfyD6VyLE/maxresdefault.jpg',
+        link: 'https://youtu.be/nTwc0AQeQEo',
+        thumbnail: '/regenerated_image_1777642710177.jpg',
         description: 'Primeira fase do Projeto Interdisciplinar: o levantamento da realidade escolar.',
       },
       {
         id: 'roda-inter-2',
         title: 'A Proposta',
-        date: 'HISTÓRICO',
-        link: 'https://youtu.be/KwcfyD6VyLE',
-        thumbnail: 'https://img.youtube.com/vi/KwcfyD6VyLE/maxresdefault.jpg',
+        date: '9 ABR 2020',
+        link: 'https://youtu.be/FSKNM31T8mU',
+        thumbnail: '/regenerated_image_1777642711096.jpg',
         description: 'A sistematização da proposta pedagógica baseada nos temas geradores.',
       },
       {
         id: 'roda-inter-3',
         title: 'Vivências',
-        date: 'HISTÓRICO',
-        link: 'https://youtu.be/KwcfyD6VyLE',
-        thumbnail: 'https://img.youtube.com/vi/KwcfyD6VyLE/maxresdefault.jpg',
+        date: '9 ABR 2020',
+        link: 'https://youtu.be/LbG9cL8tSpo',
+        thumbnail: '/regenerated_image_1777642712445.jpg',
         description: 'Relatos da implementação prática nas escolas municipais.',
       },
       {
         id: 'roda-inter-4',
         title: 'Mudanças',
-        date: 'HISTÓRICO',
-        link: 'https://youtu.be/KwcfyD6VyLE',
-        thumbnail: 'https://img.youtube.com/vi/KwcfyD6VyLE/maxresdefault.jpg',
+        date: '9 ABR 2020',
+        link: 'https://youtu.be/6Za0A5fRFUY',
+        thumbnail: '/regenerated_image_1777642713276.jpg',
         description: 'Transformações observadas no cotidiano escolar e na relação pedagógica.',
       },
       {
         id: 'roda-inter-5',
         title: 'Ganhos',
-        date: 'HISTÓRICO',
-        link: 'https://youtu.be/KwcfyD6VyLE',
-        thumbnail: 'https://img.youtube.com/vi/KwcfyD6VyLE/maxresdefault.jpg',
+        date: '9 ABR 2020',
+        link: 'https://youtu.be/T_P4Lw3sqM4',
+        thumbnail: '/regenerated_image_1777642714041.jpg',
         description: 'Avaliação dos resultados e o legado do projeto para a rede municipal.',
       },
     ]
@@ -88,9 +80,9 @@ const THEMED_VIDEOS: VideoTheme[] = [
       {
         id: 'roda-mova',
         title: 'Mova',
-        date: '09 DEZ 2024',
-        link: 'https://www.youtube.com/live/OyT5QutxSq0',
-        thumbnail: 'https://img.youtube.com/vi/OyT5QutxSq0/maxresdefault.jpg',
+        date: '04 SET 2020',
+        link: 'https://youtu.be/IMCQMDMZ6-E',
+        thumbnail: 'https://i3.ytimg.com/vi/IMCQMDMZ6-E/hqdefault.jpg',
         description: 'História e impacto do Movimento de Alfabetização criado sob a gestão de Paulo Freire.',
       },
     ]
@@ -101,10 +93,10 @@ const THEMED_VIDEOS: VideoTheme[] = [
       {
         id: 'roda-formacao',
         title: 'Grupo de formação',
-        date: 'HISTÓRICO',
-        link: 'https://youtu.be/zZAS4ByqQ-Y',
-        thumbnail: 'https://img.youtube.com/vi/zZAS4ByqQ-Y/maxresdefault.jpg',
-        description: 'Espaços de formação continuada para docentes da educação infantil e fundamental.',
+        date: '1 DEZ 2020',
+        link: 'https://youtu.be/jFhiGnEc_1c',
+        thumbnail: 'https://img.youtube.com/vi/jFhiGnEc_1c/sddefault.jpg',
+        description: 'Homenagem a Luiza Erundina e Paulo Freire',
       },
     ]
   },
@@ -114,43 +106,31 @@ const THEMED_VIDEOS: VideoTheme[] = [
       {
         id: 'roda-dh-1',
         title: 'Educação em Direitos Humanos I',
-        date: 'HISTÓRICO',
-        link: 'https://youtu.be/5OilJYK__z8',
-        thumbnail: 'https://img.youtube.com/vi/5OilJYK__z8/maxresdefault.jpg',
+        date: '11 DEZ 2020',
+        link: 'https://youtu.be/GU2EHZUjUUk',
+        thumbnail: 'https://img.youtube.com/vi/GU2EHZUjUUk/sddefault.jpg',
         description: 'Primeira parte do resgate histórico sobre as políticas de direitos humanos na SME.',
       },
       {
         id: 'roda-dh-2',
         title: 'Educação em Direitos Humanos II',
         date: 'HISTÓRICO',
-        link: 'https://youtu.be/5OilJYK__z8',
-        thumbnail: 'https://img.youtube.com/vi/5OilJYK__z8/maxresdefault.jpg',
+        link: 'https://youtu.be/p2iwY5O36z4',
+        thumbnail: 'https://img.youtube.com/vi/p2iwY5O36z4/sddefault.jpg',
         description: 'Segunda parte do debate sobre cidadania e direitos humanos na escola.',
       },
     ]
   },
-  {
-    title: '5) Projeto de Atendimento aos Professores de 5ª Série',
-    videos: [
-      {
-        id: 'roda-5-serie',
-        title: 'Atendimento aos Professores de 5ª Série',
-        date: 'HISTÓRICO',
-        link: 'https://youtu.be/rqbJRN-g2Es',
-        thumbnail: 'https://img.youtube.com/vi/rqbJRN-g2Es/maxresdefault.jpg',
-        description: 'Projeto focado no acompanhamento e formação de professores do 5º ano.',
-      },
-    ]
-  },
+ 
   {
     title: '6) Estatuto do Magistério/Regimento Comum das Escolas Municipais',
     videos: [
       {
         id: 'roda-estatuto',
         title: 'Estatuto do Magistério',
-        date: 'HISTÓRICO',
-        link: 'https://youtu.be/JI9wODgx5rw',
-        thumbnail: 'https://img.youtube.com/vi/JI9wODgx5rw/maxresdefault.jpg',
+        date: '10 JUN 2021',
+        link: 'https://youtu.be/WEVf-Nu-BbE',
+        thumbnail: 'https://img.youtube.com/vi/WEVf-Nu-BbE/sddefault.jpg',
         description: 'Debate sobre a estruturação do plano de carreira e o regimento das escolas.',
       },
     ]
@@ -174,7 +154,7 @@ export default function RodasDeMemorias() {
                   <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-pf-dark">{theme.title}</h2>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-subtle overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 overflow-hidden">
                   {theme.videos.map((video, idx) => (
                     <motion.div
                       key={video.id}
@@ -182,7 +162,7 @@ export default function RodasDeMemorias() {
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: idx * 0.05 }}
-                      className="p-10 flex flex-col gap-6 transition-colors hover:bg-pf-feature border-r border-b border-subtle"
+                      className="flex flex-col gap-3 transition-colors hover:bg-pf-feature p-4 rounded-lg"
                     >
                       <a 
                         href={video.link} 
@@ -205,8 +185,8 @@ export default function RodasDeMemorias() {
                       
                       <div>
                         <span className="text-[11px] font-bold text-pf-red uppercase mb-2 block">{video.date}</span>
-                        <h3 className="text-xl font-bold leading-tight mb-4">{video.title}</h3>
-                        <p className="text-pf-muted text-sm leading-relaxed mb-6">
+                        <h3 className="text-xl font-bold leading-tight mb-2">{video.title}</h3>
+                        <p className="text-pf-muted text-sm leading-relaxed mb-3">
                           {video.description}
                         </p>
                       </div>
