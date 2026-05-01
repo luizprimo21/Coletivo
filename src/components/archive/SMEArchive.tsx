@@ -250,7 +250,7 @@ function ArchiveItemCard({ item }: { item: ArchiveItem, key?: any }) {
     >
       <div className="aspect-[3/4] bg-pf-feature border border-subtle flex flex-col items-center justify-center text-center relative overflow-hidden group-hover/item:border-pf-red transition-colors">
         <img 
-          src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=400&h=600&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=400&h=600&auto=format&fit=crop&fm=jpg" 
           alt={item.title}
           className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover/item:scale-105 transition-transform duration-500"
           referrerPolicy="no-referrer"

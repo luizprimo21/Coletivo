@@ -6,9 +6,9 @@ export default function WhoWeAre() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const galleryImages = [
-    { src: "/regenerated_image_1777569186564.png", alt: "Mobilização em defesa da educação" },
-    { src: "/regenerated_image_1777569187556.png", alt: "Encontro de educadores" },
-    { src: "/regenerated_image_1777569188351.png", alt: "Processo formativo" },
+    { src: "https://i.postimg.cc/T3TTdPkC/image-2026-05-01-100547092.png", alt: "Mobilização em defesa da educação" },
+    { src: "https://i.postimg.cc/ZnrhZk6k/image-2026-05-01-100606720.png", alt: "Encontro de educadores" },
+    { src: "https://i.postimg.cc/Jz7Ww2nq/image-2026-05-01-100623064.png", alt: "Processo formativo" },
   ];
 
   const handleNext = (e?: React.MouseEvent) => {

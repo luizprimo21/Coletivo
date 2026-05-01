@@ -3,19 +3,19 @@ import { motion } from 'motion/react';
 const NEWS_ITEMS = [
   {
     id: '1',
-    image: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800&auto=format&fit=crop&fm=jpg',
     title: 'Lançamento do Caderno de Formação: Diálogos sobre Autonomia',
     excerpt: 'Um guia prático para educadores populares explorarem a autonomia na sala de aula.',
   },
   {
     id: '2',
-    image: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=800&auto=format&fit=crop&fm=jpg',
     title: 'Inscrições abertas para o Seminário de Educação Popular',
     excerpt: 'Participe do nosso encontro anual de formação crítica e troca de experiências.',
   },
   {
     id: '3',
-    image: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop&fm=jpg',
     title: 'Parceria com movimentos sociais fortalece rede de apoio',
     excerpt: 'Novas frentes de atuação conjunta prometem ampliar o alcance da nossa pedagogia.',
   },

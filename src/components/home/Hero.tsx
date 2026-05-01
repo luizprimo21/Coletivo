@@ -32,8 +32,18 @@ export default function Hero() {
   const TAG_COLORS = ['bg-pf-yellow', 'bg-pf-rose', 'bg-pf-blue'];
 
   return (
-    <section className="h-[380px] border-b-subtle overflow-hidden w-full relative">
-      <div className="w-full h-full relative bg-pf-feature p-10 md:p-20 flex flex-col justify-end group">
+    <section className="h-[500px] border-b-subtle overflow-hidden w-full relative">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=1920&auto=format&fit=crop&fm=jpg" 
+          alt="Hero background" 
+          className="w-full h-full object-cover opacity-20 grayscale"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-pf-feature via-pf-feature/90 to-transparent"></div>
+      </div>
+
+      <div className="w-full h-full relative z-10 p-10 md:p-20 flex flex-col justify-end group">
         <div className="absolute top-10 right-10 flex gap-2">
           {SLIDES.map((_, i) => (
             <div 
