@@ -24,7 +24,7 @@ const THEMED_VIDEOS: VideoTheme[] = [
         title: 'Educação de Adultos (Parte 1)',
         date: '27 JUL 2021',
         link: 'https://youtu.be/KwcfyD6VyLE',
-        thumbnail: '/regenerated_image_1777642709155.jpg',
+        thumbnail: 'https://img.youtube.com/vi/G27XCRn1KBo/sddefault.jpg',
         description: 'Roda de memória das comemorações dos 30 anos da gestão democrática e popular de Luiza Erundina, Pau Freire e Mario Cortella',
       },
     ]
@@ -37,7 +37,7 @@ const THEMED_VIDEOS: VideoTheme[] = [
         title: 'Diagnóstico Inicial',
         date: 'HISTÓRICO',
         link: 'https://youtu.be/nTwc0AQeQEo',
-        thumbnail: '/regenerated_image_1777642710177.jpg',
+        thumbnail: 'https://i3.ytimg.com/vi/nTwc0AQeQEo/hqdefault.jpg',
         description: 'Primeira fase do Projeto Interdisciplinar: o levantamento da realidade escolar.',
       },
       {
@@ -45,7 +45,7 @@ const THEMED_VIDEOS: VideoTheme[] = [
         title: 'A Proposta',
         date: '9 ABR 2020',
         link: 'https://youtu.be/FSKNM31T8mU',
-        thumbnail: '/regenerated_image_1777642711096.jpg',
+        thumbnail: 'https://i3.ytimg.com/vi/nTwc0AQeQEo/hqdefault.jpg',
         description: 'A sistematização da proposta pedagógica baseada nos temas geradores.',
       },
       {
@@ -61,7 +61,7 @@ const THEMED_VIDEOS: VideoTheme[] = [
         title: 'Mudanças',
         date: '9 ABR 2020',
         link: 'https://youtu.be/6Za0A5fRFUY',
-        thumbnail: '/regenerated_image_1777642713276.jpg',
+        thumbnail: 'https://i3.ytimg.com/vi/nTwc0AQeQEo/hqdefault.jpg',
         description: 'Transformações observadas no cotidiano escolar e na relação pedagógica.',
       },
       {
@@ -69,7 +69,7 @@ const THEMED_VIDEOS: VideoTheme[] = [
         title: 'Ganhos',
         date: '9 ABR 2020',
         link: 'https://youtu.be/T_P4Lw3sqM4',
-        thumbnail: '/regenerated_image_1777642714041.jpg',
+        thumbnail: 'https://i3.ytimg.com/vi/nTwc0AQeQEo/hqdefault.jpg',
         description: 'Avaliação dos resultados e o legado do projeto para a rede municipal.',
       },
     ]
