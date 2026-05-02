@@ -24,7 +24,7 @@ const EVENTS: EventItem[] = [
     title: 'Roda de Conversa: Ciclo Eleitoral 2024',
     date: '25 SET 2024',
     link: 'https://www.youtube.com/live/qj0VyQUycSE?si=ocHIE6W_ghswmsSq',
-    thumbnail: '/regenerated_image_1777573714869.jpg',
+    thumbnail: 'https://i.postimg.cc/vB6YmGNp/image-2026-05-02-172830134.png',
     description: 'O Coletivo Paulo Freire conversa com as candidadatas a vereadora de São Paulo.',
   },
   {
@@ -32,7 +32,7 @@ const EVENTS: EventItem[] = [
     title: 'Roda de Conversa: Ciclo Eleitoral 2024',
     date: '20 SET 2024',
     link: 'https://www.youtube.com/live/PNqq78oImjY?si=AfacuZWlORT9uHN8',
-    thumbnail: '/regenerated_image_1777573576669.jpg',
+    thumbnail: 'https://i.postimg.cc/jjBTmGj0/image-2026-05-02-173024584.png',
     description: 'O Coletivo Paulo Freire conversa com as candidadatas a vereadora de São Paulo.',
   },
   {
@@ -48,7 +48,7 @@ const EVENTS: EventItem[] = [
     title: 'Roda de Conversa: Ciclo Eleitoral 2022',
     date: '17 AGO 2022',
     link: 'https://www.youtube.com/watch?v=avez32WQFs0&list=PLkMGE7vcdkJzIni4W2DdgvnyTuCaqW9ne',
-    thumbnail: '/regenerated_image_1777570671640.jpg',
+    thumbnail: 'https://i.postimg.cc/8zsqGt3y/image-2026-05-02-173249680.png',
     description: 'Diálogo com candidatos a deputado estadual e federal sobre compromissos com a educação pública.',
   },
   {
@@ -72,7 +72,7 @@ const EVENTS: EventItem[] = [
     title: 'O Estado da Arte nas Escolas: Acolhimento e Condições',
     date: '27 AGO 2021',
     link: 'https://drive.google.com/file/d/1NeAdACzU1Ta5qxSKV3CO3J9O46dnpYLV/view',
-    thumbnail: '/regenerated_image_1777573097483.jpg',
+    thumbnail: 'https://i.postimg.cc/0y6HFrM4/image-2026-05-02-173415835.png',
     description: 'Reflexões sobre aprendizagem e condições sanitárias no retorno escolar.',
   },
   {

@@ -16,6 +16,7 @@ import ArchiveList from './components/archive/ArchiveList';
 import SMEArchive from './components/archive/SMEArchive';
 import RodasDeMemorias from './components/archive/RodasDeMemorias';
 import Entrevistas from './components/archive/Entrevistas';
+import DiarioDeClasse from './components/archive/DiarioDeClasse';
 import PauloFreireArchive from './components/archive/PauloFreireArchive';
 import PartnersList from './components/partners/PartnersList';
 import { NavItem } from './types';
@@ -33,6 +34,7 @@ const NAV_ITEMS: NavItem[] = [
       { id: 'acervo-rodas', label: 'Rodas de Memórias' },
       { id: 'acervo-entrevistas', label: 'Entrevistas' },
       { id: 'acervo-producoes', label: 'Textos e manifestos' },
+      { id: 'acervo-diario', label: 'Diário de Classe' },
     ]
   },
   { id: 'parcerias', label: 'Parcerias' },
@@ -65,6 +67,8 @@ export default function App() {
         return <RodasDeMemorias />;
       case 'acervo-entrevistas':
         return <Entrevistas />;
+      case 'acervo-diario':
+        return <DiarioDeClasse />;
       case 'acervo-paulo-freire':
         return <PauloFreireArchive />;
       case 'acervo':
