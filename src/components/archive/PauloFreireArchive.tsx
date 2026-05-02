@@ -178,7 +178,7 @@ export default function PauloFreireArchive() {
             <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-pf-red">Acervo</span>
             <div className="h-px flex-1 bg-pf-red/20"></div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-12 text-center text-pf-dark uppercase">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-12 text-center text-pf-dark">
             Paulo Freire <br />
             <span className="text-pf-red leading-tight">Obras e Legado</span>
           </h1>
@@ -201,7 +201,7 @@ export default function PauloFreireArchive() {
             {ARCHIVE_CONTENT.map((category) => (
               <div key={category.id} className="scroll-mt-24">
                 <div className="border-l-4 border-pf-red pl-8 mb-16">
-                  <h2 className="text-4xl font-bold uppercase tracking-tighter text-pf-red mb-4">{category.title}</h2>
+                  <h2 className="text-4xl font-bold tracking-tighter text-pf-red mb-4">{category.title}</h2>
                   <div className="h-0.5 w-24 bg-pf-red/20 mb-12"></div>
                   <ItemGrid items={category.items} />
                 </div>

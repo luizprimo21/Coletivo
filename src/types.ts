@@ -32,7 +32,8 @@ export interface ArchiveItem {
   type: 'livro' | 'documento';
   author: string;
   year?: string;
-  link: string;
+  link?: string;
+  content?: string;
 }
 
 export interface PartnerItem {

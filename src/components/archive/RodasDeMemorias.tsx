@@ -53,7 +53,7 @@ const THEMED_VIDEOS: VideoTheme[] = [
         title: 'Vivências',
         date: '9 ABR 2020',
         link: 'https://youtu.be/LbG9cL8tSpo',
-        thumbnail: '/regenerated_image_1777642712445.jpg',
+        thumbnail: 'https://i3.ytimg.com/vi/nTwc0AQeQEo/hqdefault.jpg',
         description: 'Relatos da implementação prática nas escolas municipais.',
       },
       {
@@ -143,7 +143,7 @@ export default function RodasDeMemorias() {
       <section className="py-20 border-b-subtle">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="mb-20">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-pf-dark uppercase">Rodas de Memórias</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-pf-dark">Rodas de Memórias</h1>
             <p className="text-pf-muted uppercase tracking-widest text-xs font-bold">Resgate histórico da gestão Paulo Freire na SME-SP (1989-1992)</p>
           </div>
 
@@ -151,7 +151,7 @@ export default function RodasDeMemorias() {
             {THEMED_VIDEOS.map((theme) => (
               <div key={theme.title}>
                 <div className="border-l-4 border-pf-red pl-8 mb-12">
-                  <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-pf-dark">{theme.title}</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-pf-dark">{theme.title}</h2>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 overflow-hidden">

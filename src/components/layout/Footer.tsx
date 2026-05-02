@@ -20,32 +20,36 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
           </div>
 
-          {/* Links */}
+          {/* Navegação */}
           <div className="col-span-1">
-            <h3 className="text-[11px] font-bold uppercase tracking-widest text-pf-yellow mb-6">Acesse</h3>
+            <h3 className="text-[11px] font-bold uppercase tracking-widest text-pf-yellow mb-6">Navegação</h3>
             <ul className="flex flex-col gap-3 text-xs text-white/60">
-              <li><button onClick={() => onNavigate('inicio')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider">Início</button></li>
-              <li><button onClick={() => onNavigate('quem-somos')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider">Quem Somos</button></li>
-              <li><button onClick={() => onNavigate('eventos')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider">Eventos</button></li>
-              <li><button onClick={() => onNavigate('acervo')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider">Acervo</button></li>
-              <li><button onClick={() => onNavigate('parcerias')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider">Parcerias</button></li>
+              <li><button onClick={() => onNavigate('inicio')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider text-left w-full">Início</button></li>
+              <li><button onClick={() => onNavigate('quem-somos')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider text-left w-full">Quem Somos</button></li>
+              <li><button onClick={() => onNavigate('eventos')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider text-left w-full">Eventos</button></li>
+              <li><button onClick={() => onNavigate('parcerias')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider text-left w-full">Parcerias</button></li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Acervos */}
+          <div className="col-span-1">
+            <h3 className="text-[11px] font-bold uppercase tracking-widest text-pf-yellow mb-6">Acervos</h3>
+            <ul className="flex flex-col gap-3 text-xs text-white/60">
+              <li><button onClick={() => onNavigate('acervo-sme')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider text-left w-full">Acervo SME</button></li>
+              <li><button onClick={() => onNavigate('acervo-paulo-freire')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider text-left w-full">Acervo Paulo Freire</button></li>
+              <li><button onClick={() => onNavigate('acervo')} className="hover:text-pf-yellow transition-colors uppercase tracking-wider text-left w-full">Acervo Coletivo</button></li>
+            </ul>
+          </div>
+
+          {/* Contato & Redes */}
           <div className="col-span-1">
             <h3 className="text-[11px] font-bold uppercase tracking-widest text-pf-yellow mb-6">Contato</h3>
-            <ul className="flex flex-col gap-3 text-xs text-white/60">
+            <ul className="flex flex-col gap-3 text-xs text-white/60 mb-8">
               <li className="flex items-center gap-2">
                 <Mail size={14} />
-                <span>contato@coletivopaulofreire.org</span>
+                <span className="break-all">contato@coletivopaulofreire.org</span>
               </li>
             </ul>
-          </div>
-
-          {/* Social */}
-          <div className="col-span-1">
-            <h3 className="text-[11px] font-bold uppercase tracking-widest text-pf-yellow mb-6">Siga-nos</h3>
             <div className="flex gap-4">
               <a href="#" className="p-3 border border-white/10 rounded-full hover:border-pf-yellow hover:text-pf-yellow transition-all">
                 <Instagram size={18} />

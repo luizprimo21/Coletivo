@@ -24,15 +24,15 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'inicio', label: 'Início' },
   { id: 'quem-somos', label: 'Quem Somos' },
   { id: 'eventos', label: 'Eventos' },
-  { id: 'acervo-sme', label: 'ACERVO SME' },
-  { id: 'acervo-paulo-freire', label: 'ACERVO PAULO FREIRE' },
+  { id: 'acervo-sme', label: 'Acervo SME' },
+  { id: 'acervo-paulo-freire', label: 'Acervo Paulo Freire' },
   { 
     id: 'acervo', 
-    label: 'PRODUÇÕES',
+    label: 'Acervo Coletivo',
     children: [
       { id: 'acervo-rodas', label: 'Rodas de Memórias' },
       { id: 'acervo-entrevistas', label: 'Entrevistas' },
-      { id: 'acervo-producoes', label: 'Produções do Coletivo' },
+      { id: 'acervo-producoes', label: 'Textos e manifestos' },
     ]
   },
   { id: 'parcerias', label: 'Parcerias' },

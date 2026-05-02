@@ -393,7 +393,7 @@ export default function Entrevistas() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-16"
           >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-pf-dark uppercase">ENTREVISTAS E MEMÓRIA</h1>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-pf-dark">Entrevistas e Memória</h1>
             <p className="text-pf-muted uppercase tracking-[0.2em] text-xs font-bold max-w-2xl leading-loose">
               Vozes que fundamentaram a gestão Paulo Freire e Luiza Erundina na prefeitura de São Paulo.
             </p>
@@ -402,14 +402,14 @@ export default function Entrevistas() {
           <div className="space-y-32">
             <div>
               <div className="mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-pf-dark tracking-tight uppercase">Homenagem 30 anos</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-pf-dark tracking-tight">Homenagem 30 anos</h2>
               </div>
               <Grid items={HOMENAGEM_ITEMS} />
             </div>
 
             <div>
               <div className="mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-pf-dark tracking-tight uppercase">Acervo de Entrevistas</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-pf-dark tracking-tight">Acervo de Entrevistas</h2>
               </div>
               <Grid items={ENTREVISTAS_ITEMS} />
             </div>

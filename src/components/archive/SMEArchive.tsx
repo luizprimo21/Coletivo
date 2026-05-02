@@ -447,7 +447,7 @@ export default function SMEArchive() {
             {ARCHIVE_CONTENT.map((category) => (
               <div key={category.id} className="scroll-mt-24">
                 <div className="border-l-4 border-pf-red pl-8 mb-16">
-                  <h2 className="text-4xl font-bold uppercase tracking-tighter text-pf-red mb-12">{category.title}</h2>
+                  <h2 className="text-4xl font-bold tracking-tighter text-pf-red mb-12">{category.title}</h2>
                   {category.items && (
                     <div className={category.level2 || category.level3 ? "mb-16" : ""}>
                       <ItemGrid items={category.items} />
@@ -460,7 +460,7 @@ export default function SMEArchive() {
                     {category.level2.map((l2, idx) => (
                       <div key={idx} className="pl-8">
                         <div className="mb-10">
-                          <h3 className="text-2xl font-bold uppercase tracking-tight text-pf-blue mb-4">{l2.title}</h3>
+                          <h3 className="text-2xl font-bold tracking-tight text-pf-blue mb-4">{l2.title}</h3>
                           <div className="h-0.5 w-16 bg-pf-blue/30"></div>
                         </div>
                         
@@ -476,7 +476,7 @@ export default function SMEArchive() {
                                   <div className="space-y-12 mt-12">
                                     {l3.level4.map((l4, idx4) => (
                                       <div key={idx4}>
-                                        <h5 className="text-base font-bold uppercase tracking-wider text-pf-dark/70 mb-6">{l4.title}</h5>
+                                        <h5 className="text-base font-bold tracking-wider text-pf-dark/70 mb-6">{l4.title}</h5>
                                         <ItemGrid items={l4.items} />
                                       </div>
                                     ))}

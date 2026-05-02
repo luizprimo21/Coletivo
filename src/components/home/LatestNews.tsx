@@ -27,7 +27,7 @@ export default function LatestNews() {
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="text-3xl font-bold tracking-tighter uppercase mb-2">Últimas Notícias</h2>
+            <h2 className="text-3xl font-bold tracking-tighter mb-2">Últimas Notícias</h2>
             <div className="h-1 w-12 bg-pf-red"></div>
           </div>
           <button className="text-[11px] font-bold uppercase tracking-widest text-pf-muted hover:text-pf-red transition-colors">

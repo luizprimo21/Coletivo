@@ -40,7 +40,7 @@ export default function WhoWeAre() {
     <div className="bg-pf-bg min-h-screen">
       <section className="py-24 border-b-subtle bg-pf-feature">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 max-w-4xl uppercase">Quem Somos</h1>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 max-w-4xl">Quem Somos</h1>
             <div className="h-1 w-24 bg-pf-red mb-12"></div>
             <p className="text-2xl text-pf-dark font-medium leading-[1.2] max-w-3xl border-l-[1px] border-pf-rose pl-10 italic">
                "Ninguém educa ninguém, ninguém educa a si mesmo, os homens se educam entre si, mediatizados pelo mundo."
