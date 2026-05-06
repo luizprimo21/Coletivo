@@ -524,9 +524,12 @@ export default function SMEArchive() {
           <p className="text-pf-muted mb-8 leading-relaxed">
             Se você possui documentos, fotos ou registros deste período e deseja contribuir para a preservação desta memória, entre em contato conosco.
           </p>
-          <button className="bg-pf-red text-white px-10 py-4 font-bold uppercase tracking-widest text-sm hover:invert transition-all">
+          <a 
+            href="mailto:coletivopaulofreire1@gmail.com"
+            className="inline-block bg-pf-red text-white px-10 py-4 font-bold uppercase tracking-widest text-sm hover:invert transition-all"
+          >
             Contribuir com o Acervo
-          </button>
+          </a>
         </div>
       </section>
 
@@ -576,6 +579,7 @@ export default function SMEArchive() {
                 exit={{ x: -20, opacity: 0 }}
                 src={galleryImages[selectedIndex].src}
                 alt={galleryImages[selectedIndex].alt}
+                referrerPolicy="no-referrer"
                 className="max-w-full max-h-[80vh] object-contain shadow-2xl border border-white/10"
                 onClick={(e) => e.stopPropagation()}
               />

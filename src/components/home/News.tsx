@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { NavItem } from '../../types';
 
 interface NewsProps {
-  onNavigate?: (id: string) => void;
+  onNavigate?: (page: string, id?: string | null) => void;
 }
 
 export default function News({ onNavigate }: NewsProps) {

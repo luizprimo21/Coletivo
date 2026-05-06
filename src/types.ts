@@ -41,4 +41,9 @@ export interface PartnerItem {
   name: string;
   logo?: string;
   link: string;
+  description?: string;
+  email?: string;
+  instagram?: string;
+  facebook?: string;
+  spotify?: string;
 }

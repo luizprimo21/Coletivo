@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, ArrowRight, Heart, MapPin, Calendar, Users, BookOpen } from 'lucide-react';
+import { Mail, ArrowRight, Heart, MapPin, Calendar, Users, BookOpen, Instagram, Facebook } from 'lucide-react';
 
 export default function DiarioDeClasse() {
   return (
@@ -97,10 +97,13 @@ export default function DiarioDeClasse() {
                   <p>
                     Subiremos pelo Chile (Santiago), retornando à Argentina (Mendoza, Rosário), Paraguai (Assunção), Bolívia, Peru, Equador e Colômbia, finalizando possivelmente na Venezuela.
                   </p>
+                   <p>
+              </p>
                 </div>
               </div>
 
               <div className="mb-16">
+             
                 <h2 className="text-4xl font-bold text-pf-dark mb-10 flex items-center gap-4">
                   <Heart className="text-pf-red" />
                   Financiamento
@@ -148,6 +151,42 @@ export default function DiarioDeClasse() {
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
                     className="absolute inset-0 w-full h-full"
                   ></iframe>
+                </div>
+
+                {/* Social Media Highlight */}
+                <div className="bg-white p-10 border-2 border-pf-red shadow-xl relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-pf-red/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+                  <h3 className="text-xl font-bold mb-6 text-pf-dark uppercase tracking-tighter">
+                    Acompanhe o Mochilão Libertário
+                  </h3>
+                  <p className="text-pf-muted text-sm mb-8 leading-relaxed">
+                    Siga as redes sociais do Educador Sócrates Magno Torres para acompanhar o cotidiano desta jornada.
+                  </p>
+                  
+                  <div className="space-y-4 relative z-10">
+                    <a 
+                      href="https://www.facebook.com/socrates.m.torres"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-4 text-pf-dark hover:text-pf-red transition-colors group/link"
+                    >
+                      <div className="w-10 h-10 bg-pf-dark group-hover/link:bg-pf-red text-white flex items-center justify-center rounded-sm transition-colors">
+                        <Facebook size={20} />
+                      </div>
+                      <span className="font-bold text-sm tracking-wide">Facebook</span>
+                    </a>
+                    <a 
+                      href="https://www.instagram.com/socratesmagnotorres/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-4 text-pf-dark hover:text-pf-red transition-colors group/link"
+                    >
+                      <div className="w-10 h-10 bg-pf-dark group-hover/link:bg-pf-red text-white flex items-center justify-center rounded-sm transition-colors">
+                        <Instagram size={20} />
+                      </div>
+                      <span className="font-bold text-sm tracking-wide">Instagram</span>
+                    </a>
+                  </div>
                 </div>
 
                 {/* Financing / Support */}

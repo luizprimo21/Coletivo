@@ -1,11 +1,29 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { FileText, ChevronDown, ChevronUp, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ARCHIVE_DATA, ArchiveContentItem } from '../../data/archive_content';
 
-export default function ArchiveList() {
+interface ArchiveListProps {
+  targetId?: string | null;
+}
+
+const YEARS = Object.keys(ARCHIVE_DATA).sort((a, b) => b.localeCompare(a));
+
+export default function ArchiveList({ targetId }: ArchiveListProps) {
   const [selectedItem, setSelectedItem] = useState<ArchiveContentItem | null>(null);
-  const years = Object.keys(ARCHIVE_DATA).sort((a, b) => b.localeCompare(a));
+
+  useEffect(() => {
+    if (targetId) {
+      // Find the item with the matching id across all years
+      for (const year of YEARS) {
+        const item = ARCHIVE_DATA[year].find(i => i.id === targetId);
+        if (item) {
+          setSelectedItem(item);
+          break;
+        }
+      }
+    }
+  }, [targetId]);
 
   return (
     <div className="bg-pf-bg min-h-screen">
@@ -25,7 +43,7 @@ export default function ArchiveList() {
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-5 md:px-10">
-          {years.map((year) => (
+          {YEARS.map((year) => (
             <div key={year} className="mb-20">
               <div className="flex items-center gap-6 mb-10">
                 <h2 className="text-4xl font-bold text-pf-dark">{year}</h2>

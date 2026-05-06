@@ -1,50 +1,70 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
+interface HeroProps {
+  onNavigate: (page: string) => void;
+}
+
 const SLIDES = [
   {
     id: 1,
     title: 'Educação como Prática da Liberdade',
-    description: 'Reflexões sobre a jornada pedagógica no centenário de Paulo Freire e as novas frentes do coletivo.',
+    description: 'Conheça os princípios e ideais do Coletivo Paulo Freire.',
+    image: 'https://i.postimg.cc/28DjctMX/carrossel1.jpg',
+    link: 'quem-somos',
+    buttonText: 'Conheça Nossa História'
   },
   {
     id: 2,
     title: 'Acervo Digital e Memória Viva',
-    description: 'Descubra documentos inéditos e livros produzidos pelo nosso coletivo ao longo dos anos.',
+    description: 'Documentos, livros e experiências produzidas pelo nosso coletivo ao longo dos anos.',
+    image: 'https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=1920&auto=format&fit=crop&fm=jpg',
   },
   {
     id: 3,
-    title: 'Diálogos e Saberes Populares',
-    description: 'Participe de nossos encontros e seminários virtuais focados na transformação social.',
+    title: 'Cem anos de Paulo Freire',
+    description: 'Conheça o e-book produzido pelo Coletivo em homenagem aos 100 anos do nascimento do educador.',
+    image: 'https://i.postimg.cc/7ZWQZ58v/carrossel2.jpg',
+    link: 'acervo-centenario',
+    buttonText: 'Acesse agora'
   },
 ];
 
-export default function Hero() {
+export default function Hero({ onNavigate }: HeroProps) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % SLIDES.length);
-    }, 6000);
+    }, 11000);
     return () => clearInterval(timer);
   }, []);
 
   const TAG_COLORS = ['bg-pf-yellow', 'bg-pf-rose', 'bg-pf-blue'];
 
   return (
-    <section className="h-[500px] border-b-subtle overflow-hidden w-full relative">
+    <section className="h-[600px] border-b-subtle overflow-hidden w-full relative">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=1920&auto=format&fit=crop&fm=jpg" 
-          alt="Hero background" 
-          className="w-full h-full object-cover opacity-20 grayscale"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-pf-feature via-pf-feature/90 to-transparent"></div>
+        <AnimatePresence mode="wait">
+          <motion.img 
+            key={current}
+            src={SLIDES[current].image} 
+            alt={SLIDES[current].title} 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-r from-pf-feature/60 via-pf-feature/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-pf-dark/5"></div>
       </div>
 
-      <div className="w-full h-full relative z-10 p-10 md:p-20 flex flex-col justify-end group">
-        <div className="absolute top-10 right-10 flex gap-2">
+      <div className="max-w-7xl mx-auto h-full relative z-10 px-10 md:px-20 flex flex-col justify-center group">
+        
+        <div className="absolute top-10 right-10 flex gap-2 z-20">
           {SLIDES.map((_, i) => (
             <div 
               key={i}
@@ -59,25 +79,36 @@ export default function Hero() {
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 10 }}
-            className="flex flex-col gap-4 relative z-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col gap-6 relative z-10 max-w-[900px]"
           >
             <div className={`${TAG_COLORS[current]} text-pf-dark px-3 py-1 text-[11px] font-bold self-start rounded-[2px] tracking-widest uppercase`}>
               DESTAQUE
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tighter max-w-[800px] text-pf-dark">
-              {SLIDES[current].title}
+            <h1 className="text-4xl md:text-7xl font-bold leading-[1.4] tracking-tighter max-w-[850px] text-pf-dark">
+              <span className="bg-pf-feature/60 px-4 py-2 box-decoration-clone">
+                {SLIDES[current].title}
+              </span>
             </h1>
-            <p className="text-pf-dark/80 text-base max-w-[600px]">
-              {SLIDES[current].description}
+            <p className="text-pf-dark/90 text-lg md:text-xl max-w-[650px] leading-[1.8]">
+              <span className="bg-pf-feature/60 px-3 py-1 box-decoration-clone">
+                {SLIDES[current].description}
+              </span>
             </p>
+            
+            {SLIDES[current].link && (
+              <button 
+                onClick={() => onNavigate(SLIDES[current].link!)}
+                className="mt-4 px-8 py-4 bg-pf-red text-white text-[11px] font-bold uppercase tracking-[0.2em] self-start hover:bg-pf-dark transition-all rounded-sm shadow-xl"
+              >
+                {SLIDES[current].buttonText || 'Conheça Nossa História'}
+              </button>
+            )}
           </motion.div>
         </AnimatePresence>
-
-        {/* Dynamic background element for extra depth */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-100/30 skew-x-[-15deg] translate-x-1/2 pointer-events-none" />
       </div>
     </section>
   );

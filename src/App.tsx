@@ -18,6 +18,8 @@ import RodasDeMemorias from './components/archive/RodasDeMemorias';
 import Entrevistas from './components/archive/Entrevistas';
 import DiarioDeClasse from './components/archive/DiarioDeClasse';
 import PauloFreireArchive from './components/archive/PauloFreireArchive';
+import CentenaryArchive from './components/archive/CentenaryArchive';
+import FalaEducador from './components/archive/FalaEducador';
 import PartnersList from './components/partners/PartnersList';
 import { NavItem } from './types';
 
@@ -27,7 +29,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'eventos', label: 'Eventos' },
   { id: 'acervo-sme', label: 'Acervo SME' },
   { id: 'acervo-paulo-freire', label: 'Acervo Paulo Freire' },
-  { 
+      { 
     id: 'acervo', 
     label: 'Acervo Coletivo',
     children: [
@@ -35,6 +37,8 @@ const NAV_ITEMS: NavItem[] = [
       { id: 'acervo-entrevistas', label: 'Entrevistas' },
       { id: 'acervo-producoes', label: 'Textos e manifestos' },
       { id: 'acervo-diario', label: 'Diário de Classe' },
+      { id: 'acervo-centenario', label: 'Cem anos de Paulo Freire' },
+      { id: 'acervo-fala-educador', label: 'Fala, educador!' },
     ]
   },
   { id: 'parcerias', label: 'Parcerias' },
@@ -42,6 +46,12 @@ const NAV_ITEMS: NavItem[] = [
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('inicio');
+  const [targetId, setTargetId] = useState<string | null>(null);
+
+  const navigate = (page: string, id: string | null = null) => {
+    setCurrentPage(page);
+    setTargetId(id);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -52,9 +62,9 @@ export default function App() {
       case 'inicio':
         return (
           <>
-            <Hero />
-            <LatestNews />
-            <News onNavigate={setCurrentPage} />
+            <Hero onNavigate={navigate} />
+            <LatestNews onNavigate={navigate} />
+            <News onNavigate={navigate} />
           </>
         );
       case 'quem-somos':
@@ -71,13 +81,17 @@ export default function App() {
         return <DiarioDeClasse />;
       case 'acervo-paulo-freire':
         return <PauloFreireArchive />;
+      case 'acervo-centenario':
+        return <CentenaryArchive />;
+      case 'acervo-fala-educador':
+        return <FalaEducador />;
       case 'acervo':
       case 'acervo-producoes':
-        return <ArchiveList />;
+        return <ArchiveList targetId={targetId} />;
       case 'parcerias':
         return <PartnersList />;
       default:
-        return <Hero />;
+        return <Hero onNavigate={navigate} />;
     }
   };
 
@@ -86,7 +100,7 @@ export default function App() {
       <Header 
         navItems={NAV_ITEMS} 
         activeId={currentPage} 
-        onNavigate={setCurrentPage} 
+        onNavigate={navigate} 
       />
       
       <main className="flex-grow">
@@ -103,7 +117,7 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      <Footer onNavigate={setCurrentPage} />
+      <Footer onNavigate={navigate} />
     </div>
   );
 }

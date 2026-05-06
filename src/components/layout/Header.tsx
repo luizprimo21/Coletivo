@@ -1,20 +1,28 @@
 import { NavItem } from '../../types';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import SearchOverlay from './SearchOverlay';
 
 interface HeaderProps {
   navItems: NavItem[];
   activeId: string;
-  onNavigate: (id: string) => void;
+  onNavigate: (page: string, id?: string | null) => void;
 }
 
 export default function Header({ navItems, activeId, onNavigate }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   return (
     <header className="h-20 bg-pf-bg border-b-subtle px-5 md:px-10 flex items-center justify-between sticky top-0 z-50">
+      <SearchOverlay 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+        onNavigate={onNavigate}
+      />
+      
       {/* Logo Section */}
       <div 
         className="flex items-center cursor-pointer h-full" 
@@ -29,57 +37,74 @@ export default function Header({ navItems, activeId, onNavigate }: HeaderProps) 
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex gap-8 h-full items-center">
-        {navItems.map((item) => (
-          <div 
-            key={item.id} 
-            className="relative h-full flex items-center"
-            onMouseEnter={() => setHoveredItem(item.id)}
-            onMouseLeave={() => setHoveredItem(null)}
-          >
-            <button
-              onClick={() => !item.children && onNavigate(item.id)}
-              className={`nav-link h-full flex items-center gap-1 px-2 ${
-                activeId === item.id || (item.children?.some(child => child.id === activeId)) ? 'active' : ''
-              }`}
+      <div className="hidden md:flex items-center gap-8 h-full">
+        <nav className="flex gap-8 h-full items-center">
+          {navItems.map((item) => (
+            <div 
+              key={item.id} 
+              className="relative h-full flex items-center"
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
             >
-              {item.label}
-              {item.children && <ChevronDown size={14} className={`transition-transform ${hoveredItem === item.id ? 'rotate-180' : ''}`} />}
-            </button>
+              <button
+                onClick={() => !item.children && onNavigate(item.id)}
+                className={`nav-link h-full flex items-center gap-1 px-2 ${
+                  activeId === item.id || (item.children?.some(child => child.id === activeId)) ? 'active' : ''
+                }`}
+              >
+                {item.label}
+                {item.children && <ChevronDown size={14} className={`transition-transform ${hoveredItem === item.id ? 'rotate-180' : ''}`} />}
+              </button>
 
-            {item.children && (
-              <AnimatePresence>
-                {hoveredItem === item.id && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 bg-pf-dark border border-subtle min-w-[240px] py-2 shadow-xl"
-                  >
-                    {item.children.map((child) => (
-                      <button
-                        key={child.id}
-                        onClick={() => {
-                          onNavigate(child.id);
-                          setHoveredItem(null);
-                        }}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-pf-feature transition-colors ${
-                          activeId === child.id ? 'text-pf-red font-medium' : 'text-white'
-                        }`}
-                      >
-                        {child.label}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            )}
-          </div>
-        ))}
-      </nav>
+              {item.children && (
+                <AnimatePresence>
+                  {hoveredItem === item.id && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 bg-pf-dark border border-subtle min-w-[240px] py-2 shadow-xl"
+                    >
+                      {item.children.map((child) => (
+                        <button
+                          key={child.id}
+                          onClick={() => {
+                            onNavigate(child.id);
+                            setHoveredItem(null);
+                          }}
+                          className={`w-full text-left px-4 py-2 text-sm hover:bg-pf-feature transition-colors ${
+                            activeId === child.id ? 'text-pf-red font-medium' : 'text-white'
+                          }`}
+                        >
+                          {child.label}
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              )}
+            </div>
+          ))}
+        </nav>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden">
+        {/* Search Button */}
+        <button 
+          onClick={() => setIsSearchOpen(true)}
+          className="p-2 text-pf-muted hover:text-pf-red transition-colors"
+          title="Pesquisar"
+        >
+          <Search size={22} />
+        </button>
+      </div>
+
+      {/* Mobile Menu & Search Button */}
+      <div className="flex items-center gap-4 md:hidden">
+        <button 
+          onClick={() => setIsSearchOpen(true)}
+          className="p-2 text-pf-muted"
+        >
+          <Search size={24} />
+        </button>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-pf-muted p-2"

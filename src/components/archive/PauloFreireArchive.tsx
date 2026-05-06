@@ -173,6 +173,27 @@ export default function PauloFreireArchive() {
       {/* Hero Section - Matching SME Archive layout */}
       <section className="py-24 border-b-subtle bg-pf-bg">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
+          {/* Paulo Freire Photo */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center mb-16"
+          >
+            <div className="relative group">
+              <div className="absolute inset-0 bg-pf-red -m-4 -z-10 group-hover:-m-2 transition-all duration-500"></div>
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Paulo_Freire_1963.jpg/800px-Paulo_Freire_1963.jpg" 
+                alt="Paulo Freire" 
+                referrerPolicy="no-referrer"
+                className="w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white shadow-2xl transition-all duration-700"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-pf-yellow p-4 shadow-lg hidden md:block">
+                <Book className="text-pf-dark" size={24} />
+              </div>
+            </div>
+          </motion.div>
+
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px flex-1 bg-pf-red/20"></div>
             <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-pf-red">Acervo</span>

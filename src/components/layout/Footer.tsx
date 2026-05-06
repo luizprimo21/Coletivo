@@ -1,7 +1,7 @@
-import { Instagram, Youtube, Facebook, Mail } from 'lucide-react';
+import { Instagram, Youtube, Facebook, Mail, Linkedin } from 'lucide-react';
 
 interface FooterProps {
-  onNavigate: (id: string) => void;
+  onNavigate: (page: string, id?: string | null) => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
@@ -45,20 +45,49 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="col-span-1">
             <h3 className="text-[11px] font-bold uppercase tracking-widest text-pf-yellow mb-6">Contato</h3>
             <ul className="flex flex-col gap-3 text-xs text-white/60 mb-8">
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 text-pf-yellow">
                 <Mail size={14} />
-                <span className="break-all">contato@coletivopaulofreire.org</span>
+                <a href="mailto:coletivopaulofreire1@gmail.com" className="break-all hover:underline decoration-pf-red">
+                  coletivopaulofreire1@gmail.com
+                </a>
               </li>
             </ul>
             <div className="flex gap-4">
-              <a href="#" className="p-3 border border-white/10 rounded-full hover:border-pf-yellow hover:text-pf-yellow transition-all">
+              <a 
+                href="https://www.instagram.com/coletivopaulofreire" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 border border-white/10 rounded-full hover:border-pf-yellow hover:text-pf-yellow transition-all"
+                title="Instagram"
+              >
                 <Instagram size={18} />
               </a>
-              <a href="#" className="p-3 border border-white/10 rounded-full hover:border-pf-yellow hover:text-pf-yellow transition-all">
+              <a 
+                href="https://www.facebook.com/coletivopaulofreireface" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 border border-white/10 rounded-full hover:border-pf-yellow hover:text-pf-yellow transition-all"
+                title="Facebook"
+              >
+                <Facebook size={18} />
+              </a>
+              <a 
+                href="https://www.youtube.com/channel/UChdOLfeyOXiv4BzyJweFbiA" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 border border-white/10 rounded-full hover:border-pf-yellow hover:text-pf-yellow transition-all"
+                title="YouTube"
+              >
                 <Youtube size={18} />
               </a>
-              <a href="#" className="p-3 border border-white/10 rounded-full hover:border-pf-yellow hover:text-pf-yellow transition-all">
-                <Facebook size={18} />
+              <a 
+                href="https://www.linkedin.com/company/coletivopaulofreire/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 border border-white/10 rounded-full hover:border-pf-yellow hover:text-pf-yellow transition-all"
+                title="LinkedIn"
+              >
+                <Linkedin size={18} />
               </a>
             </div>
           </div>
