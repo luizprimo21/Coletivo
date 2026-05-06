@@ -183,14 +183,12 @@ export default function PauloFreireArchive() {
             <div className="relative group">
               <div className="absolute inset-0 bg-pf-red -m-4 -z-10 group-hover:-m-2 transition-all duration-500"></div>
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Paulo_Freire_1963.jpg/800px-Paulo_Freire_1963.jpg" 
+                src="https://i.postimg.cc/FRxGtzNw/image-2026-05-06-161650518.png" 
                 alt="Paulo Freire" 
                 referrerPolicy="no-referrer"
                 className="w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white shadow-2xl transition-all duration-700"
               />
-              <div className="absolute -bottom-6 -right-6 bg-pf-yellow p-4 shadow-lg hidden md:block">
-                <Book className="text-pf-dark" size={24} />
-              </div>
+
             </div>
           </motion.div>
 
