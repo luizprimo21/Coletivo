@@ -120,7 +120,7 @@ export default function Header({ navItems, activeId, onNavigate }: HeaderProps) 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute top-20 left-0 right-0 bg-pf-bg border-b-subtle md:hidden shadow-lg p-6 flex flex-col gap-2 max-h-[80vh] overflow-y-auto"
+            className="absolute top-20 left-0 right-0 bg-pf-dark md:hidden shadow-lg p-6 flex flex-col gap-2 max-h-[80vh] overflow-y-auto"
           >
             {navItems.map((item) => (
               <div key={item.id} className="flex flex-col">
@@ -132,14 +132,14 @@ export default function Header({ navItems, activeId, onNavigate }: HeaderProps) 
                     }
                   }}
                   className={`nav-link text-left py-2 flex items-center justify-between ${
-                    activeId === item.id ? 'active w-fit' : ''
+                    activeId === item.id ? 'active w-fit' : 'text-white'
                   }`}
                 >
                   {item.label}
                 </button>
                 
                 {item.children && (
-                  <div className="flex flex-col ml-4 border-l border-subtle pl-4 mt-1 gap-1">
+                  <div className="flex flex-col ml-4 border-l border-white/10 pl-4 mt-1 gap-1">
                     {item.children.map((child) => (
                       <button
                         key={child.id}
