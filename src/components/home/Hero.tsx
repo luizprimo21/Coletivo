@@ -18,7 +18,7 @@ const SLIDES = [
     id: 2,
     title: 'Acervo Digital e Memória Viva',
     description: 'Documentos, livros e experiências produzidas pelo nosso coletivo ao longo dos anos.',
-    image: 'https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=1920&auto=format&fit=crop&fm=jpg',
+    image: 'https://i.postimg.cc/YSPbf0th/carrossel3.jpg',
   },
   {
     id: 3,
