@@ -20,6 +20,7 @@ import DiarioDeClasse from './components/archive/DiarioDeClasse';
 import PauloFreireArchive from './components/archive/PauloFreireArchive';
 import CentenaryArchive from './components/archive/CentenaryArchive';
 import FalaEducador from './components/archive/FalaEducador';
+import CadernosDeEducacao from './components/archive/CadernosDeEducacao';
 import PartnersList from './components/partners/PartnersList';
 import { NavItem } from './types';
 
@@ -38,6 +39,7 @@ const NAV_ITEMS: NavItem[] = [
       { id: 'acervo-producoes', label: 'Textos e manifestos' },
       { id: 'acervo-diario', label: 'Diário de Classe' },
       { id: 'acervo-centenario', label: 'Cem anos de Paulo Freire' },
+      { id: 'acervo-cadernos', label: 'Cadernos de educação' },
       { id: 'acervo-fala-educador', label: 'Fala, educador!' },
     ]
   },
@@ -85,6 +87,8 @@ export default function App() {
         return <CentenaryArchive />;
       case 'acervo-fala-educador':
         return <FalaEducador />;
+      case 'acervo-cadernos':
+        return <CadernosDeEducacao />;
       case 'acervo':
       case 'acervo-producoes':
         return <ArchiveList targetId={targetId} />;

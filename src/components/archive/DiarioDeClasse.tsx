@@ -26,7 +26,7 @@ export default function DiarioDeClasse() {
               Diário de <span className="text-pf-yellow">Classe</span>
             </h1>
             <p className="text-2xl text-white/90 font-medium tracking-tight mb-8">
-              Um mochilão libertário até o fim do mundo e além dele.
+              Um mochilão libertário pela América Latina
             </p>
           </motion.div>
         </div>
@@ -36,99 +36,86 @@ export default function DiarioDeClasse() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
-            
-            {/* Project Details */}
+                  {/* Project Details */}
             <div className="lg:col-span-7">
               <div className="mb-16">
                 <h2 className="text-4xl font-bold text-pf-dark mb-10 flex items-center gap-4">
                   <BookOpen className="text-pf-red" />
-                  O Projeto
+                  O Mochilão Libertário
                 </h2>
                 <div className="space-y-6 text-lg text-pf-dark/80 leading-relaxed font-serif text-justify">
                   <p>
-                    Este projeto, que na verdade chamo de "processo", conta, inicialmente, com a chancela inicial do Coletivo Paulo Freire e tem como grande objetivo realizar rodas de conversa em diversas unidades escolares, coletivos, institutos de educação, coletivos, da América do Sul, relacionadas à educação libertária. Sobretudo, entidades que carreguem o nome e o legado do Educador Paulo Freire.
+                    O Mochilão Libertário foi um projeto/processo que nasceu com o objetivo de realizar rodas de conversa em diversas unidades escolares, coletivos e institutos de educação ao redor da América Latina. Com a chancela inicial do Coletivo Paulo Freire, a iniciativa buscou promover atividades formativas relacionadas à educação libertária, decolonial e popular, focando especialmente em entidades que preservam o legado do educador Paulo Freire.
                   </p>
                   <p>
-                    Para tal, percorrerei ao menos 40 cidades, realizando atividades formativas, desde o Uruguai, chegando até a Terra do Fogo, na Argentina, passando por cidades do Chile, Paraguai, Bolívia, Peru, Equador, Colômbia e Venezuela.
-                  </p>
-                  <p>
-                    Os encontros formativos serão previamente agendados com essas entidades, que estão sendo mapeadas e contatadas, para a realização das atividades. Assim, poderemos ter tempo para mobilização de agentes ligados à educação para que possamos realizar as rodas de conversa e entendermos as abordagens de cada unidade, assim como discutir os fundamentos do pensamento freireano, além do pensamento de diversas autoras e autores ligados à educação libertária e decolonial.
-                  </p>
-                  <p className="bg-pf-feature p-8 border-l-4 border-pf-red font-sans text-pf-dark italic">
-                    "Será como uma cartografia de afetos, que traçará uma espécie de espinha dorsal na América do Sul, onde o pensamento do educador Paulo Freire esteja presente."
-                  </p>
-                  <p>
-                    Ao final da execução deste projeto, pretendemos, como produto, realizar uma publicação homônima sobre as experiências realizadas em cada unidade, trazendo relatos e fundamentações teóricas que foram discutidas ou observadas durante as intervenções.
+                    O projeto justificou-se pela necessidade de debater os avanços e retrocessos democráticos na América Latina, reafirmando a educação como instituição fundamental para a consolidação dos Direitos Humanos, o respeito ao meio ambiente, aos povos originários e às lutas antirracistas, feministas e de diversidade de gênero.
                   </p>
                 </div>
               </div>
 
               <div className="mb-16">
                 <h2 className="text-4xl font-bold text-pf-dark mb-10 flex items-center gap-4">
-                  <Users className="text-pf-red" />
-                  Justificativa
-                </h2>
-                <div className="text-lg text-pf-dark/80 leading-relaxed font-serif text-justify">
-                  <p>
-                    Nas últimas décadas, a América Latina passou por diversas transformações, no que diz respeito aos regimes políticos, econômicos e sociais. Foram muitos avanços e retrocessos para a Democracia e para a própria educação, enquanto importante instituição para consolidação dos Direitos Humanos, respeito ao meio ambiente, aos povos originários, às lutas antirracistas, feministas, à diversidade de gêneros e aos demais grupos sociais historicamente oprimidos e perseguidos no nosso continente.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h2 className="text-4xl font-bold text-pf-dark mb-10 flex items-center gap-4">
                   <MapPin className="text-pf-red" />
-                  Execução
+                  Primeira Fase: América do Sul
                 </h2>
                 <div className="text-lg text-pf-dark/80 leading-relaxed font-serif space-y-6 text-justify">
                   <p>
-                    Essa jornada se iniciará a partir da cidade de Porto Alegre, com destino à Puerto Chuy, no Uruguai. Teremos atividades nessa localidade e depois avançaremos para a capital, Montevidéu. Adentraremos a Argentina pela capital Buenos Aires, seguindo para o sul do continente: Bahía Blanca, Puerto Madryn, San Julian, até chegar à Tierra del Fuego, Ushuaia.
+                    A jornada começou em Porto Alegre, de onde o educador Sócrates Magno Torres partiu com destino a Puerto Chuy, no Uruguai. Esta primeira etapa durou 105 dias e traçou uma verdadeira "espinha dorsal" no continente sul-americano.
                   </p>
-                  <div className="grid grid-cols-2 gap-4 py-8">
+                  <p>
+                    A expedição percorreu cidades do Uruguai (incluindo a capital Montevidéu), adentrou a Argentina por Buenos Aires e seguiu até o extremo sul, em Ushuaia (Terra do Fogo). O percurso de retorno subiu pelo Chile, passou novamente pela Argentina, Paraguai, Bolívia, Peru, Equador e Colômbia.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-8">
                     <div className="bg-white p-6 border border-pf-red/10">
-                      <p className="text-[10px] uppercase font-black text-pf-red mb-1">Duração prevista</p>
-                      <p className="text-2xl font-bold text-pf-dark">105 Dias</p>
+                      <p className="text-[10px] uppercase font-black text-pf-red mb-1">Países</p>
+                      <p className="text-2xl font-bold text-pf-dark">10</p>
                     </div>
                     <div className="bg-white p-6 border border-pf-red/10">
                       <p className="text-[10px] uppercase font-black text-pf-red mb-1">Cidades</p>
                       <p className="text-2xl font-bold text-pf-dark">+40</p>
                     </div>
+                    <div className="bg-white p-6 border border-pf-red/10">
+                      <p className="text-[10px] uppercase font-black text-pf-red mb-1">Intervenções</p>
+                      <p className="text-2xl font-bold text-pf-dark">65</p>
+                    </div>
                   </div>
+
                   <p>
-                    Subiremos pelo Chile (Santiago), retornando à Argentina (Mendoza, Rosário), Paraguai (Assunção), Bolívia, Peru, Equador e Colômbia, finalizando possivelmente na Venezuela.
+                    Ao final desta fase, o objetivo foi entender as abordagens de cada unidade escolar e discutir os fundamentos do pensamento freireano, transformando a viagem em uma cartografia de afetos e experiências pedagógicas.
                   </p>
-                   <p>
-              </p>
                 </div>
               </div>
 
               <div className="mb-16">
-             
                 <h2 className="text-4xl font-bold text-pf-dark mb-10 flex items-center gap-4">
-                  <Heart className="text-pf-red" />
-                  Financiamento
+                  <MapPin className="text-pf-red" />
+                  Segunda Fase: América Central
                 </h2>
-                <div className="text-lg text-pf-dark/80 leading-relaxed font-serif text-justify space-y-6">
+                <div className="text-lg text-pf-dark/80 leading-relaxed font-serif space-y-6 text-justify">
                   <p>
-                    O financiamento para execução desse projeto será realizado através de vaquinha eletrônica, depósito e pix de doações voluntárias, além da busca de instituições que possam contribuir para essa jornada, associando a sua marca ao projeto.
+                    O projeto seguiu para a sua segunda etapa, focada na América Central. Nesta fase, o educador dedicou quase sessenta dias para mapear e integrar coletivos, universidades e grupos de arte em uma região da "América Latina profunda".
                   </p>
                   <p>
-                    Pretendemos confeccionar cards para cada atividade, que divulgaremos na imprensa, nas mídias sociais e em vídeos diários, para acompanhamento de seguidores. Assim, as marcas de instituições parceiras serão exibidas e as mesmas também contribuirão na divulgação do projeto, em tempo real.
+                    A jornada percorreu nove países: Panamá, Costa Rica, Nicarágua, Honduras, El Salvador, Guatemala, Belize, República Dominicana e Cuba.
+                  </p>
+                  <p>
+                    O foco manteve-se em investigar o quanto os fundamentos de Paulo Freire estavam presentes nos rincões centro-americanos, fortalecendo os vínculos necessários para a consolidação da democracia latino-americana através da troca de experiências em educação popular.
                   </p>
                 </div>
               </div>
 
-              <div>
+              <div className="mb-16">
                 <h2 className="text-4xl font-bold text-pf-dark mb-10 flex items-center gap-4">
-                  <BookOpen className="text-pf-red" />
-                  Conclusão
+                  <Heart className="text-pf-red" />
+                  Legado e Financiamento
                 </h2>
                 <div className="text-lg text-pf-dark/80 leading-relaxed font-serif text-justify space-y-6">
                   <p>
-                    Acreditamos muito nos processos de educação libertária. A execução deste projeto pode acender uma luz inspiradora em muitas pessoas e instituições espalhadas pelo continente e contribuir para que possamos vislumbrar um mundo melhor. Nas intervenções pretendemos aprender muito mais que ensinar, trocar experiências, compartilhar as vivências anteriores com as que vêm em cada encontro subsequente.
+                    O financiamento para execução desse projeto foi realizado através de vaquinha eletrônica, depósito e pix de doações voluntárias. Essa ação acendeu uma luz inspiradora em muitas pessoas e instituições espalhadas pelo continente, contribuindo para que possamos vislumbrar um mundo melhor.
                   </p>
-                  <p>
-                    Além disso, a execução desse projeto será apenas o início de um profundo e amplo debate sobre a educação no nosso continente, que poderá reverberará em diversas novas rodas de conversa, publicações, conteúdo de audiovisual, debates sobre essa experiência.
+                  <p className="bg-pf-feature p-8 border-l-4 border-pf-red font-sans text-pf-dark italic">
+                    "O Mochilão Libertário foi apenas o início de um profundo e amplo debate sobre a educação no nosso continente."
                   </p>
                 </div>
               </div>
