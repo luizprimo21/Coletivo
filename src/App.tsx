@@ -21,6 +21,7 @@ import PauloFreireArchive from './components/archive/PauloFreireArchive';
 import CentenaryArchive from './components/archive/CentenaryArchive';
 import FalaEducador from './components/archive/FalaEducador';
 import CadernosDeEducacao from './components/archive/CadernosDeEducacao';
+import DiarioCronologia from './components/archive/DiarioCronologia';
 import PartnersList from './components/partners/PartnersList';
 import { NavItem } from './types';
 
@@ -80,7 +81,9 @@ export default function App() {
       case 'acervo-entrevistas':
         return <Entrevistas />;
       case 'acervo-diario':
-        return <DiarioDeClasse />;
+        return <DiarioDeClasse onNavigate={navigate} />;
+      case 'acervo-diario-cronologia':
+        return <DiarioCronologia onBack={() => navigate('acervo-diario')} />;
       case 'acervo-paulo-freire':
         return <PauloFreireArchive />;
       case 'acervo-centenario':

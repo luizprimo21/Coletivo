@@ -1,7 +1,11 @@
 import { motion } from 'motion/react';
 import { Mail, ArrowRight, Heart, MapPin, Calendar, Users, BookOpen, Instagram, Facebook } from 'lucide-react';
 
-export default function DiarioDeClasse() {
+interface DiarioDeClasseProps {
+  onNavigate: (page: string, id?: string | null) => void;
+}
+
+export default function DiarioDeClasse({ onNavigate }: DiarioDeClasseProps) {
   return (
     <div className="bg-pf-bg min-h-screen">
       {/* Hero Section */}
@@ -84,6 +88,16 @@ export default function DiarioDeClasse() {
                   <p>
                     Ao final desta fase, o objetivo foi entender as abordagens de cada unidade escolar e discutir os fundamentos do pensamento freireano, transformando a viagem em uma cartografia de afetos e experiências pedagógicas.
                   </p>
+
+                  <div className="mt-8">
+                    <button 
+                      onClick={() => onNavigate('acervo-diario-cronologia')}
+                      className="group flex items-center gap-3 text-pf-red font-bold uppercase tracking-widest text-xs hover:text-pf-dark transition-colors"
+                    >
+                      <span className="border-b-2 border-pf-red group-hover:border-pf-dark pb-1">Ver publicações desta fase</span>
+                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
               </div>
 
